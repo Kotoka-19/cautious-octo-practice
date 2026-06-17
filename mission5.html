@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>横浜の明日の天気</title>
+</head>
+<body>
+    <hi>横浜の明日の天気</hi>
+    <div id="weather">ここに表示</div>
+    <script>
+        fetch('https://weather.tsukumijima.net/api/forecast?city=140010')
+        .then((response) => response.json())
+        .then((data) => {
+            const tomorrow = data.forecasts[1];
+            const weather = tomorrow.telop; 
+            const maxTemperature = tomorrow.temperature.max.celsius;
+            const minTemperature = tomorrow.temperature.min.celsius;
+            const message = `明日: ${weather} (最高気温: ${maxTemperature}℃, 最低気温: ${minTemperature}℃)`;
+            document.getElementById('weather').innerText = message;
+        });
+    </script>     
+</body>
+</html>
