@@ -1,0 +1,111 @@
+/* ページ全体 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: blue;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* タイトル */
+h1 {
+    color: #333;
+}
+
+/* 各エリア */
+#userArea,
+#quizArea,
+#finishArea,
+#cookieArea {
+    background-color: white;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 問題文 */
+#question {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/* 選択肢ボタン */
+.choice {
+    width: 80%;
+    padding: 10px;
+    margin: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue ;
+    color: white;
+    cursor: pointer;
+}
+
+/* マウスを乗せたとき */
+.choice:hover {
+    background-color:  blue;
+}
+
+/* 共通ボタン */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 次へボタン */
+#nextButton {
+    background-color: #2196F3;
+    color: white;
+}
+
+#nextButton:hover {
+    background-color: #1976D2;
+}
+
+/* リスタートボタン */
+#restartButton {
+    background-color: orange;
+    color: white;
+}
+
+#restartButton:hover {
+    background-color: darkorange;
+}
+
+/* Cookieリセットボタン */
+#resetCookie {
+    background-color: red;
+    color: white;
+}
+
+#resetCookie:hover {
+    background-color: darkred;
+}
+
+/* 結果表示 */
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+}
+
+/* スマートフォン対応 */
+@media (max-width: 768px) {
+    #userArea,
+    #quizArea,
+    #finishArea,
+    #cookieArea {
+        width: 90%;
+    }
+
+    .choice {
+        width: 95%;
+    }
+}

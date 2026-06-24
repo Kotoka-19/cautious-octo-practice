@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RADWIMPSクイズチャレンジ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>RADWIMPSクイズチャレンジ</h1>
+
+    <!-- ユーザー情報 -->
+    <div id="userArea">
+        <p id="greeting">！</p>
+        <p>最高得点：<span id="highScore">0</span>点</p>
+    </div>
+
+    <hr>
+
+    <!-- クイズ表示エリア -->
+    <div id="quizArea">ようこそ！
+
+        <h2 id="questionNumber">問題1</h2>
+
+        <p id="question">
+            ここに問題文が表示されます
+        </p>
+
+        <div id="choices">
+            <button class="choice">選択肢1</button><br><br>
+            <button class="choice">選択肢2</button><br><br>
+            <button class="choice">選択肢3</button><br><br>
+            <button class="choice">選択肢4</button>
+        </div>
+
+        <br>
+
+        <p id="result"></p>
+
+        <button id="nextButton">次の問題へ</button>
+
+    </div>
+
+    <hr>
+
+    <!-- 最終結果 -->
+    <div id="finishArea" style="display:none;">
+        <h2>結果発表</h2>
+
+        <p id="scoreText"></p>
+
+        <button id="restartButton">もう一度挑戦</button>
+    </div>
+
+    <hr>
+
+    <!-- Cookie操作 -->
+    <div id="cookieArea">
+        <button id="resetCookie">Cookieをリセット</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
